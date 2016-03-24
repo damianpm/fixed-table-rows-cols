@@ -64,7 +64,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 			}
 
 			var $thFirst = $ths.first();
-			var thSpace = parseInt($thFirst.css('paddingLeft'), 0) + parseInt($thFirst.css('paddingRight'), 0);
+			var thSpace = parseInt($thFirst.css('paddingLeft'), 10) + parseInt($thFirst.css('paddingRight'), 10);
 
 			/* set width and textAlign from colModal */
 			var ct = 0;
@@ -74,7 +74,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 					calcWidth += cfg.colModal[ct].width;
 					ct++;
 				}
-				// $(el).css({width: calcWidth, textAlign: cfg.colModal[ct-1].align});
+				$(el).css({width: calcWidth, textAlign: cfg.colModal[ct-1].align});
 
 				lc.tableWidth += calcWidth + thSpace + ((i == 0)?2:1);
 			});
